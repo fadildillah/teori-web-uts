@@ -4,23 +4,137 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Crimson Text', serif;
 }
 
-.header {
-    background-color: rgba(0, 0, 0, 0.2);
-    background-image: url(../assets/tkd1-min.jpg);
-    background-blend-mode: overlay;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+html {
+    font-size: 1rem;
 }
 
-.header-caption {
-    text-align: center;
-    margin: auto 0px;
+#mainNav {
+    position: absolute;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #fff;
 }
-    
+
+#navbarResponsive ul li a {
+    text-decoration: none;
+    letter-spacing: 0px;
+    -webkit-transition: letter-spacing 0.3s linear;
+    -moz-transition: letter-spacing 0.3s linear;
+    -ms-transition: letter-spacing 0.3s linear;
+    -o-transition: letter-spacing 0.3s linear;
+    transition: letter-spacing 0.3s linear;
+}
+
+#navbarResponsive ul li a:hover {
+    letter-spacing: 5px;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    letter-spacing: 0px;
+    -webkit-transition: letter-spacing 0.3s linear;
+    -moz-transition: letter-spacing 0.3s linear;
+    -ms-transition: letter-spacing 0.3s linear;
+    -o-transition: letter-spacing 0.3s linear;
+    transition: letter-spacing 0.3s linear;
+}
+
+.nav-logo a:hover {
+    letter-spacing: 5px;
+}
+
+.masthead {
+    height: 550px;
+    margin-bottom: 50px;
+    background: no-repeat 50%;
+    background-color: #6c757d;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: .5;
+}
+
+.site-heading {
+    text-align: center;
+}
+
+.subheading {
+    font-size: 32px;
+    font-weight: 300;
+    display: block;
+    margin: 10px 0 0;
+}
+
+.img-article {
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.img-team {
+    object-fit: cover;
+    width: 100%;
+    max-height: 260px;
+}
+
+.img-club {
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.custom-hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.cstm-margin {
+    margin-top: -175px;
+}
+
+.card-img-overlay {
+    margin-top: auto !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .site-heading {
+        padding: 300px 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #mainNav {
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        transition: background-color .2s;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+
+    #mainNav.is-fixed {
+        position: fixed;
+        top: -75px;
+        transition: -webkit-transform .2s;
+        transition: transform .2s;
+        transition: transform .2s,-webkit-transform .2s;
+        border-bottom: 1px solid rgb(83, 76, 76);
+        background-color: rgba(87, 82, 82, 0.568);
+    }
+
+    #mainNav.is-visible {
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+}
+
